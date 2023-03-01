@@ -7,6 +7,7 @@ export default function Store() {
     let [products, setProducts] = useState();
     let [view, setView] = useState('view_list');
     
+    
     products = [{
         name: "Nike Metcon 2",
         price: "130",
@@ -42,9 +43,9 @@ export default function Store() {
       view = ['view_list', 'view_module'];
     return(
         <>
-            <IconSwitch icon={view[0]} onSwitch={() => setView()}/>
-            <CardsView cards={products.img}/>
-            <ListView items={products.img}/>
+            <IconSwitch icon={view} onSwitch={() => setView(view[0] !== view[1] ? view[1] : view[0])}/>
+            <CardsView cards={products}/>
+            <ListView items={products}/>
         </>
     );
 }

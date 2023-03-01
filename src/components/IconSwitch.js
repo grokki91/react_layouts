@@ -1,7 +1,9 @@
-export default function IconSwitch() {
+export default function IconSwitch({icon}) {
     return(
         <>
-            <button onClick={() => this}></button>
+            <div className="material-icons" onClick={(e) => console.log(e.target.textContent)}>
+                {icon === 'view_module' ? 'view_module' : 'view_list'}
+            </div>
         </>
     );
 }

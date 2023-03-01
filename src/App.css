@@ -1,5 +1,56 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-button {
+.App {
+ margin: auto;
+ text-align: right;
+ width: 850px;
+}
+
+.material-icons {
   cursor: pointer;
+  text-align: right;
+}
+
+span {
+  cursor: pointer;
+}
+
+.shopcard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-box {
+  text-align: center;
+  margin: 10px 0;
+  width: 250px;
+  padding: 10px;
+  background-color: #F5F5F5;
+}
+
+.card-box img {
+  background-color: transparent;
+  width: 200px;
+}
+
+.price {
+  color: green;
+}
+
+button {
+  color: green;
+  padding: 5px 10px;
+  border: 1px solid green;
+  border-radius: 50px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #d2caca;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
 }

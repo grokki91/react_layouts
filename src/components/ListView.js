@@ -1,12 +1,9 @@
 import ShopItem from "./ShopItem";
 
-export default function ListView() {
+export default function ListView({items}) {
     return(
         <>
-            <span class="material-icons">
-                view_list
-            </span>
-            <ShopItem />
+            <ShopItem items={items}/>
         </>
     );
 }

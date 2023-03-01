@@ -1,12 +1,10 @@
 import ShopCard from "./ShopCard";
 
-export default function CardsView() {
+export default function CardsView(props) {
     return(
         <>
-            <span class="material-icons">
-                view_module
-            </span>
-            <ShopCard />
+        {/* <div>{console.log(props.cards)}</div> */}
+            <ShopCard cards={props.cards}/>
         </>
     );
 }
