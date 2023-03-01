@@ -1,9 +1,9 @@
 import ShopItem from "./ShopItem";
 
-export default function ListView({items}) {
+export default function ListView(props) {
     return(
         <>
-            <ShopItem items={items}/>
+            <ShopItem items={props.items}/>
         </>
     );
 }
