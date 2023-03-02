@@ -43,7 +43,7 @@ export default function Store() {
     //   view = ['view_list', 'view_module'];
     return(
         <>
-            <IconSwitch icon={view} onSwitch={() => setView(view !== 'view_module' ? 'view_list' : 'view_module')}/>
+            <IconSwitch icon={view} onSwitch={setView}/>
             {view === 'view_list' ? 
                 <ListView items={products}/> :
                 <CardsView cards={products}/>
