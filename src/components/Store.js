@@ -4,7 +4,7 @@ import IconSwitch from './IconSwitch';
 import ListView from './ListView';
 
 export default function Store() {
-    let [products, setProducts] = useState();
+    let [products] = useState('');
     let [view, setView] = useState('view_module');
     
     
@@ -40,11 +40,14 @@ export default function Store() {
         img: "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/events-state/layouts/img/5.jpg"
       }];
 
-    //   view = ['view_list', 'view_module'];
+      const onSwitch = (e) => {
+        setView(view = e.target.outerText);
+      }
+
     return(
         <>
-            <IconSwitch icon={view} onSwitch={setView}/>
-            {view === 'view_list' ? 
+            <IconSwitch icon={view} onSwitch={onSwitch}/>
+            {view !== 'view_module' ? 
                 <ListView items={products}/> :
                 <CardsView cards={products}/>
             }

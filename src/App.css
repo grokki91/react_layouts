@@ -27,6 +27,7 @@ span {
   width: 250px;
   padding: 10px;
   background-color: #F5F5F5;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.2);
 }
 
 .card-box img {
